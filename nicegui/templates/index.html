@@ -158,7 +158,7 @@
           window.socket = io(url, { path: "{{ prefix | safe }}/_nicegui_ws/socket.io", query, extraHeaders });
           window.socket.on("connect", () => {
             window.socket.emit("handshake", (ok) => {
-              if (!ok) window.location.reload();
+              // if (!ok) window.location.reload();
               document.getElementById('popup').style.opacity = 0;
             });
           });
